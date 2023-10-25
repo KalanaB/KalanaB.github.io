@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap');
+
+
+header {
+    height: 100vh;
+    padding-top: 2rem;
+    /* overflow: hidden; */
+    
+}
+
+.header_container {
+    text-align: center;
+    height: 100%;
+    position: relative;  
+}
+
+.header_container h1{
+    /* font-family: 'Birthstone Bounce', cursive; */
+    /* font-family: 'Moirai One', cursive; */
+    font-weight: 700;
+    /* letter-spacing: .3rem; */
+
+}
+.text-light-header{
+    font-size: 1rem;
+    color: var(--color-primary);
+}
+
+/*=================CTA=================*/
+.cta {
+    margin-top: 2.5rem;
+    gap: 1.2rem;
+    justify-content: center;
+    display: inline-flex;
+}
+
+.download-icon{
+    padding-left: 0.75rem;
+    font-size: 1.3rem;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+}
+
+.download-icon {
+    transition: 0.5s;
+    display: inline-flex;
+    
+  }
+
+.btn:hover .download-icon{
+    transform: translate(.25rem);
+    display: inline-flex;
+}
+
+
+/*=================HEADER SOCIALS=================*/
+.header_socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    position: absolute;
+    left: 0;
+    bottom: 4rem;
+    font-size: 1.3rem;
+}
+
+.header_socials::after {
+    content: "";
+    width: 2px;
+    height: 2.5rem;
+    background: var(--color-primary);
+    border-radius: 3rem;
+}
+
+/*=================ME=================*/
+/* .me-background{
+    background: var(--color-white);
+    backdrop-filter: blur(15px);
+    width: 20rem;
+    height: 20rem;
+    position: absolute;
+    left: calc(50% - 11rem);
+    margin-top: 3rem;
+    border-radius: 12rem 12rem 0 0;
+    overflow: hidden;
+    padding: 1rem 1rem 1rem 1rem;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 9px rgb(255, 255, 255 / 30%);
+    order: 1;
+    animation: profile_animate-1 5s ease-in-out infinite .2s;
+    border: .3rem solid var(--color-white);
+    
+} */
+
+.me {
+    background: var(--color-white);
+    backdrop-filter: blur(15px);
+    /* width: 50vb;
+    height: 50vb; */
+    width: 19rem;
+    height: 19rem;
+    position: absolute;
+    padding-top: 1rem;
+    /* align-items: center; */
+    left: calc(50% - 9.5rem);
+    margin-top: 3rem;
+    border-radius: 12rem 12rem 0 0;
+    padding: auto;
+    overflow: hidden;
+    /* padding: 1rem 1rem 1rem 1rem; */
+    background-repeat: no-repeat;
+    /* box-shadow: inset 0 0 0 9px rgb(255, 255, 255 / 30%); */
+    order: 1;
+    animation: profile_animate-1 8s ease-in-out infinite 1s;
+    border: .5rem solid var(--color-white);
+    border-style: double;
+   
+}
+
+@keyframes profile_animate {
+    0%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+
+    50%{
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+
+    100%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}
+
+@keyframes profile_animate-1 {
+    0%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+
+    50%{
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+
+    100%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}
+
+/* .me:hover {
+    background: var(--color-white);
+  } */
+
+  
+  
+
+/*=================SCROLL DOWN=================*/
+.scroll_down{
+    right: -2.3rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: .9rem;
+}
+
+.scroll {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex;
+    gap: 2.3rem;
+    position: absolute;
+    right: -2.3rem;
+    bottom: 6rem;
+    font-weight: 300;
+    font-size: .9rem;
+    color: var(--color-primary);
+  }
+  
+  
+  .scroll-icon {
+    font-size: 1.8rem;
+    transition: 0.5s;
+    
+  }
+
+  .scroll:hover .scroll-icon{
+    transform: translatey(.5rem);
+}
+  
+
+/*=====================MEDIA QUERIES (MEDIUM DEVICES)=========================*/
+@media screen and (max-width: 1024px) {
+    header {
+        height: 68vh;
+    }
+}
+
+/*=====================MEDIA QUERIES (SMALL DEVICES)=========================*/
+@media screen and (max-width: 600px) {
+    header {
+        height: 100vh;
+    }
+
+    .header_socials,
+    .scroll_down {
+        display: none;
+    }
+
+    .header_socials,
+    .scroll-icon {
+        display: none;
+    }
+}

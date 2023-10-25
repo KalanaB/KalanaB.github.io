@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@500&display=swap');
+nav {
+    background: rgba(0, 0, 0, 0.05);
+    /* border: 3px solid var(--color-primary); */
+    width: max-content;
+    /* display: block; */
+    padding: .3rem 2rem;
+    z-index: 2;
+    position: fixed;
+    left: 50%;
+    transform: translatex(-50%);
+    bottom: 2rem;
+    /* top: 1.3rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 3rem;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 .1rem .3rem rgba(0, 0, 0, 0.5);
+    
+  }
+
+  nav:hover {
+    box-shadow: 0 .1rem .4rem rgba(0, 0, 0, 0.7);  
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .signature {
+    /* background: transparent; */
+    display: flex;
+    color: var(--color-light);
+    font-size: 1.3rem;
+    font-family: 'Birthstone Bounce', cursive;
+    font-weight: 600;
+    letter-spacing: .2rem;
+    /* padding: none; */
+    /* width: max-content; */
+    /* display: block; */
+    /* padding: 0.6rem 3rem; */
+    /* padding-bottom: 1.3rem; */
+    /* z-index: 2; */
+    /* position: fixed; */
+    /* left: 50%; */
+    /* transform: translatex(-50%); */
+    /* bottom: 2rem; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nav-links a {
+    background: transparent;
+    padding: 0.6rem;
+    border-radius: 50%;
+    display: flex;
+    color: var(--color-light);
+    font-size: 1.4rem;
+    font-weight: 600;
+    border:  3px solid transparent; 
+  }
+
+  @keyframes profile_animate {
+    0%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+
+    50%{
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+
+    100%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}
+
+  /* .nav-links a ::after{
+    border: 6px solid var(--color-bg);
+  } */
+
+  
+  nav a:hover {
+    background: rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+
+  }
+  
+
+  
+  nav a.active {
+    background: var(--color-primary);
+    color: var(--color-bg);
+    /* transform: translateY(-29px); */
+    border:  3px solid var(--color-bg);
+    /* animation: profile_animate 5s ease-in-out infinite .2s; */
+  }
+
+  
+  
